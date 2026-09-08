@@ -1,0 +1,71 @@
+{
+  "_deident_note": "本 fixture 为测试替身,模拟 HIS 审方栏正式对接字段。字段命名与 contract.py SCHEMA_HIS_REVIEW_FIELD 严格对齐(rule_id / order_hash / session_id / operator / applied_at / evidence_excerpt / confirmed / conflicts / recommended_rule_id)。operator 仅使用占位工号 (如 pharmacist-<EXAMPLE_ID>);order_hash / session_id 为示例 hex(非真实 sha256 输出,仅供字段类型/形态断言);不作为最终 HIS integration surface(spec.md ## 对接层 显式声明)。",
+  "his_review_fields": [
+    {
+      "rule_id": "rx-aminoglycoside-pediatric",
+      "order_hash": "5d41402abc4b2a76b9719d911c8b1f2e7c0b9d3a4f5e6a7b8c9d0e1f2a3b4c5d",
+      "session_id": "a1b2c3d4e5f60718",
+      "operator": "pharmacist-<EXAMPLE_ID>",
+      "applied_at": "2026-09-08T10:15:30+00:00",
+      "evidence_excerpt": "氨基糖苷类(如庆大霉素、妥布霉素)儿童应避免长期使用,确需使用应监测血药浓度与肾功能。",
+      "confirmed": false,
+      "conflicts": [],
+      "recommended_rule_id": null
+    },
+    {
+      "rule_id": "rx-nsaid-pregnancy",
+      "order_hash": "6e52513bcd5c3b87c0820e021d9c2f3f8d1c0e4b5f6a7b8c9d0e1f2a3b4c5d6e",
+      "session_id": "b2c3d4e5f6071829",
+      "operator": "pharmacist-<EXAMPLE_ID>",
+      "applied_at": "2026-09-08T11:22:45+08:00",
+      "evidence_excerpt": "孕 32 周后使用 NSAID 可能引起胎儿动脉导管提前关闭及羊水减少,孕期应避免长期使用。",
+      "confirmed": false,
+      "conflicts": [],
+      "recommended_rule_id": null
+    },
+    {
+      "rule_id": "rx-metformin-renal",
+      "order_hash": "7f63624cde6d4c98d1931f132e0d2f4f9e2d1f5c6a7b8c9d0e1f2a3b4c5d6e7f",
+      "session_id": "c3d4e5f60718293a",
+      "operator": "pharmacist-<EXAMPLE_ID>",
+      "applied_at": "2026-09-08T13:08:12+08:00",
+      "evidence_excerpt": "二甲双胍在 eGFR<45 时应减量,eGFR<30 禁用,以避免乳酸酸中毒风险。",
+      "confirmed": false,
+      "conflicts": [],
+      "recommended_rule_id": null
+    },
+    {
+      "rule_id": "rx-warfarin-inr",
+      "order_hash": "8a74735def7e5da9e2a420243f1e3f5f0f3e2d6d7b8c9d0e1f2a3b4c5d6e7f80",
+      "session_id": "d4e5f60718293a4b",
+      "operator": "pharmacist-<EXAMPLE_ID>",
+      "applied_at": "2026-09-08T14:45:00+08:00",
+      "evidence_excerpt": "华法林治疗窗 INR 2.0-3.0(机械瓣膜 2.5-3.5),INR 超目标值应减量或暂停并复查凝血功能。",
+      "confirmed": false,
+      "conflicts": [],
+      "recommended_rule_id": null
+    },
+    {
+      "rule_id": "rx-ppi-longterm",
+      "order_hash": "9b85846ef08f6eb0f3b531354f2f4061f4f3e7e8c9d0e1f2a3b4c5d6e7f80992",
+      "session_id": "e5f60718293a4b5c",
+      "operator": "pharmacist-<EXAMPLE_ID>",
+      "applied_at": "2026-09-08T15:30:25+08:00",
+      "evidence_excerpt": "PPI 连续使用超过 8 周需评估停药或按需治疗,长期使用增加骨质疏松、低镁血症与艰难梭菌感染风险。",
+      "confirmed": false,
+      "conflicts": [],
+      "recommended_rule_id": null
+    },
+    {
+      "rule_id": "rx-acei-pregnancy",
+      "order_hash": "ac96957f01907fc105c642465f405062f5f4f8f9d0e1f2a3b4c5d6e7f80991a3",
+      "session_id": "f60718293a4b5c6d",
+      "operator": "pharmacist-<EXAMPLE_ID>",
+      "applied_at": "2026-09-08T16:05:18+08:00",
+      "evidence_excerpt": "ACEI 类药物在孕期绝对禁忌,可致胎儿肾发育不全、羊水过少与新生儿低血压,应立即替换。",
+      "confirmed": false,
+      "conflicts": [],
+      "recommended_rule_id": null
+    }
+  ]
+}

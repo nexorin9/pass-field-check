@@ -1,0 +1,59 @@
+# 依赖与虚拟环境
+.env
+.venv/
+venv/
+env/
+
+# 数据与运行时产物
+data/
+audit/
+logs/
+tmp/
+temp/
+.cache/
+
+# Python 缓存与构建
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# 测试与 lint 缓存
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# 构建产物
+dist/
+build/
+*.egg-info/
+.eggs/
+
+# 前端 / Node
+node_modules/
+.next/
+.nuxt/
+out/
+
+# Rust
+target/
+
+# 临时文件
+*.log
+*.tmp
+*.temp
+*.swp
+*.swo
+.DS_Store
+
+# Round 元数据（不进 GitHub 项目）
+score.json
+
+# 备注：qrcode.jpg 与 README.md 必须保留并提交
+!qrcode.jpg
+!README.md
+!README_EN.md
+!LICENSE

@@ -1,0 +1,89 @@
+{
+  "_deident_note": "本 fixture 为测试替身,模拟 HIS 用药医嘱字段上下文。patient_id / visit_id / order_no 等均使用占位符 (如 <EXAMPLE_PATIENT_ID>),不混合真实日期/批号风格。所有字段值仅用于 pytest,不代表真实患者数据;不作为最终 HIS 对接格式(spec.md ## 对接层 显式声明)。",
+  "prescriptions": [
+    {
+      "prescription_id": "<EXAMPLE_RX_001>",
+      "patient_age": 8,
+      "pregnancy": false,
+      "egfr": 95,
+      "drug_name": "庆大霉素注射液",
+      "generic_name": "gentamicin",
+      "dose": "80mg",
+      "route": "iv",
+      "frequency": "q8h",
+      "department": "儿科",
+      "indication": "呼吸道感染",
+      "scenario_desc": "儿童 8 岁静滴庆大霉素,儿童氨基糖苷类应避免长期使用,需复核剂量与监测 TDM。"
+    },
+    {
+      "prescription_id": "<EXAMPLE_RX_002>",
+      "patient_age": 32,
+      "pregnancy": true,
+      "egfr": 110,
+      "drug_name": "布洛芬缓释胶囊",
+      "generic_name": "ibuprofen",
+      "dose": "200mg",
+      "route": "po",
+      "frequency": "q12h",
+      "department": "产科",
+      "indication": "妊娠期腰背痛",
+      "scenario_desc": "孕 32 周口服 NSAID,孕晚期应避免使用非甾体抗炎药以免影响胎儿动脉导管与羊水。"
+    },
+    {
+      "prescription_id": "<EXAMPLE_RX_003>",
+      "patient_age": 67,
+      "pregnancy": false,
+      "egfr": 45,
+      "drug_name": "盐酸二甲双胍片",
+      "generic_name": "metformin",
+      "dose": "500mg",
+      "route": "po",
+      "frequency": "bid",
+      "department": "内分泌科",
+      "indication": "2 型糖尿病",
+      "scenario_desc": "67 岁老年糖尿病,eGFR=45 提示中度肾功能不全,二甲双胍需减量或停用,避免乳酸酸中毒。"
+    },
+    {
+      "prescription_id": "<EXAMPLE_RX_004>",
+      "patient_age": 28,
+      "pregnancy": true,
+      "egfr": 120,
+      "drug_name": "卡托普利片",
+      "generic_name": "captopril",
+      "dose": "25mg",
+      "route": "po",
+      "frequency": "tid",
+      "department": "心内科",
+      "indication": "妊娠期高血压",
+      "scenario_desc": "孕妇 28 周使用 ACEI,孕期 ACEI 类绝对禁忌,可致胎儿肾损伤与畸形,建议替换为拉贝洛尔/甲基多巴。"
+    },
+    {
+      "prescription_id": "<EXAMPLE_RX_005>",
+      "patient_age": 58,
+      "pregnancy": false,
+      "egfr": 78,
+      "drug_name": "华法林钠片",
+      "generic_name": "warfarin",
+      "dose": "3mg",
+      "route": "po",
+      "frequency": "qd",
+      "department": "心内科",
+      "indication": "房颤抗凝",
+      "scenario_desc": "58 岁房颤患者服用华法林,INR 应维持在治疗窗(2.0-3.0),INR 偏高需减量或暂停。"
+    },
+    {
+      "prescription_id": "<EXAMPLE_RX_006>",
+      "patient_age": 71,
+      "pregnancy": false,
+      "egfr": 60,
+      "drug_name": "奥美拉唑肠溶胶囊",
+      "generic_name": "omeprazole",
+      "dose": "20mg",
+      "route": "po",
+      "frequency": "qd",
+      "department": "消化内科",
+      "indication": "胃食管反流",
+      "scenario_desc": "71 岁老年患者连续使用 PPI 8 周,长期使用 PPI 增加骨质疏松/低镁血症/艰难梭菌感染风险,建议评估停药。"
+    }
+  ]
+}
